@@ -5,7 +5,7 @@ const proyectos = [
     titulo: "MotoWild",
     descripcion: "Landing page para tours en moto por el sur de Chile.",
     imagen: "https://via.placeholder.com/400x250?text=MotoWild",
-    enlace: "https://motowild.netlify.app"
+    enlace: "https://gentle-sprite-d4815a.netlify.app/"
   },
   {
     titulo: "SoftSolution S.A.",
