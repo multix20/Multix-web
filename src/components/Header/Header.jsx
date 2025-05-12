@@ -23,19 +23,25 @@ const Header = () => {
         <nav className="space-x-6">
           <a
             href="#servicios"
-            className={`transition-colors duration-300 ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-yellow-300'}`}
+            className={`transition-colors duration-300 ${
+              scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-yellow-300'
+            }`}
           >
             Servicios
           </a>
           <a
             href="#proyectos"
-            className={`transition-colors duration-300 ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-yellow-300'}`}
+            className={`transition-colors duration-300 ${
+              scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-yellow-300'
+            }`}
           >
             Proyectos
           </a>
           <a
             href="#contacto"
-            className={`transition-colors duration-300 ${scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-yellow-300'}`}
+            className={`transition-colors duration-300 ${
+              scrolled ? 'text-gray-800 hover:text-blue-600' : 'text-white hover:text-yellow-300'
+            }`}
           >
             Contacto
           </a>
