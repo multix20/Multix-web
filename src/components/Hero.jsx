@@ -10,7 +10,7 @@ const Hero = () => {
         muted
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/public/assets/videos/mar.mp4" type="video/mp4" />
+        <source src="/assets/videos/mar.mp4" type="video/mp4" />
         Tu navegador no soporta video en HTML5.
       </video>
 
