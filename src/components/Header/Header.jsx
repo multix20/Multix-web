@@ -24,17 +24,22 @@ const Header = () => {
 
         {/* Menú escritorio */}
         <nav className="hidden md:flex space-x-6">
-          {['servicios', 'proyectos', 'contacto'].map((item) => (
+          {[
+            { id: 'about', label: 'Sobre mí' },
+            { id: 'servicios', label: 'Servicios' },
+            { id: 'proyectos', label: 'Proyectos' },
+            { id: 'contacto', label: 'Contacto' }
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item}`}
+              key={item.id}
+              href={`#${item.id === 'servicios' ? 'servicios-section' : item.id}`}
               className={`transition-colors duration-300 ${
                 scrolled
                   ? 'text-gray-800 hover:text-blue-600'
                   : 'text-white hover:text-yellow-300'
               }`}
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {item.label}
             </a>
           ))}
         </nav>
@@ -61,14 +66,19 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-40 pt-20 px-6">
           <ul className="flex flex-col gap-6">
-            {['servicios', 'proyectos', 'contacto'].map((item) => (
-              <li key={item}>
+            {[
+              { id: 'about', label: 'Sobre mí' },
+              { id: 'servicios', label: 'Servicios' },
+              { id: 'proyectos', label: 'Proyectos' },
+              { id: 'contacto', label: 'Contacto' }
+            ].map((item) => (
+              <li key={item.id}>
                 <a
-                  href={`#${item}`}
+                  href={`#${item.id === 'servicios' ? 'servicios-section' : item.id}`}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-xl font-medium text-gray-800 hover:text-blue-600"
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                  {item.label}
                 </a>
               </li>
             ))}

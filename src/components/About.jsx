@@ -47,9 +47,9 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-32 h-32 mb-4 md:mb-0">
+              <div className="w-72 h-48 mb-4 md:mb-0">
                 <img 
-                  src="/image/perfil.jpg" 
+                  src="/public/assets/image/perfil.JPG" 
                   alt="Juan Pablo Monsalve" 
                   className="rounded-full object-cover w-full h-full border-4 border-blue-100"
                 />
@@ -58,9 +58,7 @@ const About = () => {
                 <h3 className="text-xl font-semibold mb-3">Quién Soy</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Soy Juan Pablo Monsalve Suazo, apasionado por el software libre, el desarrollo web moderno 
-                  y la administración de sistemas Linux. Con una visión clara de ofrecer soluciones con propósito, 
-                  fundé <strong>MultiX</strong> como una forma de aplicar mis conocimientos técnicos para mejorar 
-                  los procesos tecnológicos de personas y empresas.
+                  y la administración de sistemas Linux..
                 </p>
               </div>
             </div>
@@ -81,8 +79,8 @@ const About = () => {
               <h3 className="text-xl font-semibold">Educación</h3>
             </div>
             <ul className="space-y-2 text-gray-700 pl-4">
-              <li>Ingeniería en Informática, Universidad de Chile</li>
-              <li>Certificación en Desarrollo Web Full Stack</li>
+              <li>Docente de educación básica</li>
+              <li>Certificación en Desarrollo Web Full Stack. Desafio Latam</li>
               <li>Especialización en Administración de Sistemas Linux</li>
             </ul>
           </motion.div>

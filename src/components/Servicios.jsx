@@ -31,7 +31,7 @@ const servicios = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="servicios-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-12">Nuestros Servicios</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
