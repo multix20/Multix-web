@@ -22,7 +22,7 @@ const proyectos = [
     id: 2,
     titulo: "SoftSolution S.A.",
     descripcion: "Brochure digital para software de gestión empresarial con demostraciones interactivas de funcionalidades clave.",
-    imagen: "assets/image/soft.jpg",
+    imagen: "assets/image/erp.gif",
     enlace: "https://fanciful-palmier-ebb68f.netlify.app/",
     tech: ["React", "Material UI", "Chart.js"],
     escalable: false,
