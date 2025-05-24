@@ -20,9 +20,9 @@ const Contacto = () => {
         {/* Lado Izquierdo */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-extrabold text-gray-800 mb-4">¿Trabajamos juntos?</h2>
-          <p className="text-gray-600 mb-6 text-lg">¡Me encantaría saber de ti! Escríbeme por WhatsApp o deja tus datos y te contacto pronto.</p>
+          <p className="text-gray-600 mb-6 text-lg">¡Me encantaría saber de ti!</p>
           <a
-            href="https://wa.me/56912345678"
+            href="https://wa.me/56951569704"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition mb-4"

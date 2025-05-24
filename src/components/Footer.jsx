@@ -55,7 +55,7 @@ const Footer = () => {
           {/* Redes sociales */}
           <div className="flex space-x-6">
             <a
-              href="https://github.com/Multix-UG"
+              href="https://github.com/Multix20"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-100 p-3 rounded-full text-gray-600 hover:text-blue-600 hover:bg-gray-200 transition-all duration-300"
@@ -85,10 +85,10 @@ const Footer = () => {
 
           {/* Información de contacto */}
           <div className="text-center text-gray-500 text-sm">
-            <p>Santiago, Chile</p>
+            <p>Temuco, Chile</p>
             <p className="flex items-center justify-center gap-2">
               <Mail size={16} />
-              multix.web@gmail.com
+              jp.devtravel@gmail.com
             </p>
           </div>
 
