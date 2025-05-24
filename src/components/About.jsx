@@ -40,12 +40,12 @@ const About = () => {
     { icon: <span className="text-blue-600 text-2xl">⚛️</span>, name: 'React' },
     { icon: <FileType2 size={28} className="text-white" />, name: 'Next.js', bg: 'bg-gray-800' },
     { icon: <Terminal size={28} className="text-yellow-600" />, name: 'Linux', bg: 'bg-yellow-100' },
-    { icon: <span className="text-blue-600 text-xl">🐳</span>, name: 'Docker', bg: 'bg-blue-100' },
+    { icon: <span className="text-indigo-600 text-2xl">📊</span>, name: 'Tableau', bg: 'bg-indigo-100' },
     { icon: <Code2 size={28} className="text-yellow-600" />, name: 'JavaScript', bg: 'bg-yellow-100' },
     { icon: <Server size={28} className="text-green-600" />, name: 'Node.js', bg: 'bg-green-100' },
     { icon: <Github size={28} className="text-white" />, name: 'GitHub', bg: 'bg-gray-900' },
     { icon: <Database size={28} className="text-white" />, name: 'MySQL', bg: 'bg-blue-500' },
-    { icon: <Cog size={28} className="text-purple-600" />, name: 'DevOps', bg: 'bg-purple-100' },
+    { icon: <span className="text-blue-500 text-2xl">🎨</span>, name: 'CSS', bg: 'bg-blue-100' },
   ];
 
   return (
