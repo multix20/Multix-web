@@ -49,7 +49,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-72 h-48 mb-4 md:mb-0">
                 <img 
-                  src="/public/assets/image/perfil.JPG" 
+                  src="/assets/image/perfil.JPG" 
                   alt="Juan Pablo Monsalve" 
                   className="rounded-full object-cover w-full h-full border-4 border-blue-100"
                 />
