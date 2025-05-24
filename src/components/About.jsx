@@ -47,11 +47,11 @@ const About = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-72 h-48 mb-4 md:mb-0">
+              <div className="w-48 h-48 md:w-72 md:h-48 mb-4 md:mb-0 mx-auto">
                 <img 
                   src="/assets/image/perfil.JPG" 
                   alt="Juan Pablo Monsalve" 
-                  className="rounded-full object-cover w-full h-full border-4 border-blue-100"
+                  className="rounded-full object-cover w-full h-full border-4 border-blue-100 shadow-lg"
                 />
               </div>
               <div>

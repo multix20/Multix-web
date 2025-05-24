@@ -6,7 +6,7 @@ const proyectos = [
     id: 1,
     titulo: "MotoWild",
     descripcion: "Landing page para tours en moto por el sur de Chile. Diseño responsivo con galería de imágenes y sistema de reservas.",
-    imagen: "assets/image/moto.jpg",
+    imagen: "assets/image/mtw.gif",
     enlace: "https://gentle-sprite-d4815a.netlify.app/",
     tech: ["React", "Tailwind CSS", "Firebase"],
     escalable: true,
@@ -38,8 +38,8 @@ const proyectos = [
     id: 3,
     titulo: "Ecotonal Studio",
     descripcion: "Sitio de grabación y producción musical profesional con reproductor de audio integrado y galería de trabajos.",
-    imagen: "assets/image/eco.jpg",
-    enlace: "https://ecotonal.netlify.app",
+    imagen: "assets/image/eco.gif",
+    enlace: "https://ecotonalstudio.netlify.app/",
     tech: ["React", "Styled Components", "Howler.js"],
     escalable: true,
     dinamico: true,
@@ -53,13 +53,12 @@ const proyectos = [
 ];
 
 const Proyectos = () => {
-  return (
-    <section id="proyectos" className="py-16 bg-gray-100">
+  return (    <section id="proyectos" className="py-32 bg-gray-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8" style={{ fontFamily: 'var(--font-heading)' }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-20" style={{ fontFamily: 'var(--font-heading)' }}>
           Proyectos Recientes
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
           {proyectos.map((proyecto) => (
             <div
               key={proyecto.id}
@@ -67,13 +66,12 @@ const Proyectos = () => {
             >
               {proyecto.imagen && (
                 <img src={proyecto.imagen} alt={proyecto.titulo} className="w-full h-48 object-cover" />
-              )}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2" style={{ fontFamily: 'var(--font-subheading)' }}>
+              )}              <div className="p-10">
+                <h3 className="text-xl font-semibold text-gray-800 mb-6" style={{ fontFamily: 'var(--font-subheading)' }}>
                   {proyecto.titulo}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">{proyecto.descripcion}</p>
-                <div className="flex flex-wrap gap-2 mb-3">
+                <p className="text-gray-600 text-sm mb-8 line-clamp-2">{proyecto.descripcion}</p>
+                <div className="flex flex-wrap gap-4 mb-8">
                   {proyecto.tech && proyecto.tech.map((tech, index) => (
                     <span
                       key={index}
