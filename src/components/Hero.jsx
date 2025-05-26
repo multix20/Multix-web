@@ -97,7 +97,7 @@ const Hero = () => {
           Desarrollo web escalable y moderno
         </p>
         <a
-          href="#productos"
+          href="#proyectos"
           className="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition transform hover:scale-105 active:scale-95"
         >
           Ver productos
