@@ -1,106 +1,85 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Instagram, Linkedin, Github, Mail, ChevronUp } from 'lucide-react';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const navItems = [
+    { href: '#servicios-section', label: 'Servicios' },
+    { href: '#proyectos', label: 'Proyectos' },
+    { href: '#contacto', label: 'Contacto' },
+  ];
 
-  // Animation effect
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const handleSubscribe = () => {
-    if (email && email.includes('@')) {
-      setIsSubscribed(true);
-      setShowPopup(true);
-      setEmail('');
-      
-      // Hide popup after 3 seconds
-      setTimeout(() => {
-        setShowPopup(false);
-      }, 3000);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+  const socialLinks = [
+    { href: 'https://github.com/Multix20', icon: <Github size={18} />, label: 'GitHub' },
+    { href: 'https://linkedin.com/in/juan-pablo-monsalve', icon: <Linkedin size={18} />, label: 'LinkedIn' },
+    { href: 'https://instagram.com/multix.web', icon: <Instagram size={18} />, label: 'Instagram' },
+  ];
 
   return (
-    <footer className="relative overflow-hidden pt-16 pb-10 bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center space-y-8">
-          {/* Logo y descripción */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-800 mb-3">Multix-Web</h3>
-            <p className="text-gray-600 max-w-md mx-auto">
-              Transformando ideas en experiencias digitales extraordinarias
+    <footer className="bg-gray-900 text-gray-400 py-12">
+      <div className="container mx-auto px-6">
+
+        {/* Top */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-10">
+
+          {/* Marca */}
+          <div>
+            <h3 className="text-white font-bold text-lg mb-1">Multix-Web</h3>
+            <p className="text-sm text-gray-500 max-w-xs">
+              Convertimos tu idea en un sitio web profesional que vende.
             </p>
           </div>
 
-          {/* Enlaces rápidos */}
-          <div className="flex flex-wrap justify-center gap-8 text-gray-600">
-            <a href="#about" className="hover:text-blue-600 transition-colors">Sobre mí</a>
-            <a href="#servicios-section" className="hover:text-blue-600 transition-colors">Servicios</a>
-            <a href="#proyectos" className="hover:text-blue-600 transition-colors">Proyectos</a>
-            <a href="#contacto" className="hover:text-blue-600 transition-colors">Contacto</a>
+          {/* Links */}
+          <nav className="flex flex-wrap gap-6 text-sm">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="hover:text-white transition-colors duration-200"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Redes */}
+          <div className="flex gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="w-9 h-9 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200"
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
-
-          {/* Redes sociales */}
-          <div className="flex space-x-6">
-            <a
-              href="https://github.com/Multix20"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-100 p-3 rounded-full text-gray-600 hover:text-blue-600 hover:bg-gray-200 transition-all duration-300"
-            >
-              <Github size={20} />
-            </a>
-            <a
-              href="https://linkedin.com/in/juan-pablo-monsalve"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-100 p-3 rounded-full text-gray-600 hover:text-blue-600 hover:bg-gray-200 transition-all duration-300"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="https://instagram.com/multix.web"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-100 p-3 rounded-full text-gray-600 hover:text-blue-600 hover:bg-gray-200 transition-all duration-300"
-            >
-              <Instagram size={20} />
-            </a>
-          </div>
-
-          {/* Línea decorativa con gradiente */}
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-
-          {/* Información de contacto */}
-          <div className="text-center text-gray-500 text-sm">
-            <p>Temuco, Chile</p>
-            <p className="flex items-center justify-center gap-2">
-              <Mail size={16} />
-              jp.devtravel@gmail.com
-            </p>
-          </div>
-
-          {/* Botón para subir */}
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="absolute right-8 bottom-8 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-blue-600 hover:text-purple-600"
-          >
-            <ChevronUp size={24} />
-          </button>
         </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <div className="flex items-center gap-2">
+            <Mail size={14} />
+            <span>jp.devtravel@gmail.com</span>
+            <span className="text-gray-600 mx-2">·</span>
+            <span>Temuco, Chile</span>
+          </div>
+          <p className="text-gray-600">© {new Date().getFullYear()} Multix-Web · Todos los derechos reservados</p>
+        </div>
+
       </div>
+
+      {/* Botón subir */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed right-6 bottom-24 bg-gray-800 hover:bg-blue-600 text-white p-2.5 rounded-full shadow-lg transition-all duration-300"
+        aria-label="Volver arriba"
+      >
+        <ChevronUp size={20} />
+      </button>
     </footer>
   );
 };
